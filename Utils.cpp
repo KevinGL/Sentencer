@@ -164,7 +164,16 @@ void Sentencer::addDeterminant(std::wstring &term)
         {
             if(!Sent_isVoyel(term[0]))
             {
-                term = L"le " + term;       //Ou "la" si féminin
+                if(getGenderNumber(term) == L"ms")
+                {
+                    term = L"le " + term;
+                }
+
+                else
+                if(getGenderNumber(term) == L"fs")
+                {
+                    term = L"la " + term;
+                }
             }
 
             else
