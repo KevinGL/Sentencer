@@ -33,12 +33,13 @@ class Sentencer
 
     Sentencer();
     std::wstring create(Sent_sentence sent, const bool noUp = false, const bool noPoint = false);
-    std::wstring createTwo(const Sent_sentence s1, const Sent_sentence s2, std::wstring connector);
+    std::wstring assemble(const std::vector<Sent_sentence> sentences, std::vector<std::wstring> connectors);
 };
 
 std::wstring Sent_readValueJSONline(const std::wstring line);
 std::wstring Sent_readKeyJSONline(const std::wstring line);
 std::wstring Sent_tolower(const std::wstring str);
+std::wstring Sent_toupperInit(const std::wstring str);
 bool Sent_isVoyel(const wchar_t character);
 bool Sent_isPronom(const std::wstring term);
 int Sent_indexOfWstring(const std::vector<std::wstring> array, const std::wstring value);

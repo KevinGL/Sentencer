@@ -70,6 +70,26 @@ std::wstring Sent_tolower(const std::wstring str)
     return res;
 }
 
+std::wstring Sent_toupperInit(const std::wstring str)
+{
+    std::wstring res = L"";
+
+    for(size_t i = 0 ; i < str.length() ; i++)
+    {
+        if(i == 0)
+        {
+            res += std::toupper(str.at(i));
+        }
+
+        else
+        {
+            res += str.at(i);
+        }
+    }
+
+    return res;
+}
+
 bool Sent_isVoyel(const wchar_t character)
 {
     if(std::tolower(character) == L'a' || std::tolower(character) == L'e' || std::tolower(character) == L'i' || std::tolower(character) == L'o' || std::tolower(character) == L'u' || std::tolower(character) == L'y' ||

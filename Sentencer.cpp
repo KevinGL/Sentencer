@@ -230,12 +230,14 @@ Sentencer::Sentencer()
 
 std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool noPoint)
 {
-    if(verbs.count(sent.verb) == 0)
+    std::wstring verb = Sent_toupperInit(sent.verb);
+
+    if(verbs.count(verb) == 0)
     {
-        return L"Error : Verb \"" + sent.verb + L"\" does not exist";
+        return L"Error : Verb \"" + verb + L"\" does not exist";
     }
 
-    if(verbs[sent.verb].count(sent.tense) == 0)
+    if(verbs[verb].count(sent.tense) == 0)
     {
         return L"Error : Tense \"" + sent.tense + L"\" does not exist";
     }
@@ -315,7 +317,7 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         person = 2;
     }
 
-    std::wstring verbConjugued = verbs[sent.verb][sent.tense][person];
+    std::wstring verbConjugued = verbs[verb][sent.tense][person];
     bool apostroph = false;
 
     //if(Sent_isVoyel(sent.subject.back()) && Sent_isVoyel(verbConjugued[0]))
@@ -331,12 +333,6 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
     {
         res += L" ";
     }
-
-    std::wofstream file("aa.txt", std::ios::app);
-
-    file << verbConjugued << std::endl;
-
-    file.close();
 
     //if(sent.adverb == L"pas" || sent.adverb == L"plus" || sent.adverb == L"jamais" || sent.adverb == L"rien")
     if(sent.adverb.find(L"pas") != std::string::npos || sent.adverb.find(L"plus") != std::string::npos || sent.adverb.find(L"jamais") != std::string::npos || sent.adverb.find(L"rien") != std::string::npos)
@@ -382,7 +378,7 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
 
         //std::wcout << subject << L": " << gender_number << std::endl;
 
-        if(Sent_indexOfWstring(verbsExceptions, Sent_tolower(sent.verb)) == -1)
+        if(Sent_indexOfWstring(verbsExceptions, Sent_tolower(verb)) == -1)
         {
             setAdjective(gender_number, sent.adjective);
         }
@@ -403,11 +399,11 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
     return res;
 }
 
-std::wstring Sentencer::createTwo(const Sent_sentence s1, const Sent_sentence s2, std::wstring connector)
+std::wstring Sentencer::assemble(const std::vector<Sent_sentence> sentences, std::vector<std::wstring> connectors)
 {
     std::wstring res = L"";
 
-    if(connector != L",")
+    /*if(connector != L",")
     {
         res = create(s1, false, true) + L" " + Sent_tolower(connector) + L" " + create(s2, true, false);
     }
@@ -415,6 +411,42 @@ std::wstring Sentencer::createTwo(const Sent_sentence s1, const Sent_sentence s2
     else
     {
         res = create(s1, false, true) + Sent_tolower(connector) + L" " + create(s2, true, false);
+    }*/
+
+    if(connectors.size() > sentences.size() - 1)
+    {
+        return L"Error : Too connectors";
+    }
+
+    if(connectors.size() < sentences.size() - 1)
+    {
+        return L"Error : Not enough connectors";
+    }
+
+    for(size_t i = 0 ; i < sentences.size() ; i++)
+    {
+        if(i == 0)
+        {
+            res += create(sentences[i], false, true);
+        }
+
+        else
+        {
+            res += create(sentences[i], true, false);
+        }
+
+        if(i < sentences.size() - 1)
+        {
+            if(connectors[i] != L",")
+            {
+                res += L" " + connectors[i] + L" ";
+            }
+
+            else
+            {
+                res += connectors[i] + L" ";
+            }
+        }
     }
 
     return res;
