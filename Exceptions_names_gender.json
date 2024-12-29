@@ -1,0 +1,152 @@
+[
+    {
+        "name": "eau",
+        "plural": "eaux",
+        "gender": "f"
+    },
+    {
+        "name": "voix",
+        "plural": "voix",
+        "gender": "f"
+    },
+    {
+        "name": "main",
+        "plural": "mains",
+        "gender": "f"
+    },
+    {
+        "name": "lueur",
+        "plural": "lueurs",
+        "gender": "f"
+    },
+    {
+        "name": "faim",
+        "plural": "faims",
+        "gender": "f"
+    },
+    {
+        "name": "dent",
+        "plural": "dents",
+        "gender": "f"
+    },
+    {
+        "name": "soif",
+        "plural": "soifs",
+        "gender": "f"
+    },
+    {
+        "name": "paix",
+        "plural": "paix",
+        "gender": "f"
+    },
+    {
+        "name": "mer",
+        "plural": "mers",
+        "gender": "f"
+    },
+    {
+        "name": "chair",
+        "plural": "chairs",
+        "gender": "f"
+    },
+    {
+        "name": "fin",
+        "plural": "fins",
+        "gender": "f"
+    },
+    {
+        "name": "peur",
+        "plural": "peurs",
+        "gender": "f"
+    },
+    {
+        "name": "lumière",
+        "plural": "lumières",
+        "gender": "f"
+    },
+    {
+        "name": "problème",
+        "plural": "problèmes",
+        "gender": "m"
+    },
+    {
+        "name": "musée",
+        "plural": "musées",
+        "gender": "m"
+    },
+    {
+        "name": "système",
+        "plural": "systèmes",
+        "gender": "m"
+    },
+    {
+        "name": "domaine",
+        "plural": "domaines",
+        "gender": "m"
+    },
+    {
+        "name": "programme",
+        "plural": "programmes",
+        "gender": "m"
+    },
+    {
+        "name": "thème",
+        "plural": "thèmes",
+        "gender": "m"
+    },
+    {
+        "name": "exemple",
+        "plural": "exemples",
+        "gender": "m"
+    },
+    {
+        "name": "principe",
+        "plural": "principes",
+        "gender": "m"
+    },
+    {
+        "name": "geste",
+        "plural": "gestes",
+        "gender": "m"
+    },
+    {
+        "name": "message",
+        "plural": "messages",
+        "gender": "m"
+    },
+    {
+        "name": "monde",
+        "plural": "mondes",
+        "gender": "m"
+    },
+    {
+        "name": "cycle",
+        "plural": "cycles",
+        "gender": "m"
+    },
+    {
+        "name": "silence",
+        "plural": "silences",
+        "gender": "m"
+    },
+    {
+        "name": "phénomène",
+        "plural": "phénomènes",
+        "gender": "m"
+    },
+    {
+        "name": "espace",
+        "plural": "espaces",
+        "gender": "m"
+    },
+    {
+        "name": "style",
+        "plural": "styles",
+        "gender": "m"
+    },
+    {
+        "name": "livre",
+        "plural": "livres",
+        "gender": "m"
+    }
+]

@@ -1,0 +1,98 @@
+[
+    {
+        "ms": "frais",
+        "mp": "frais",
+        "fs": "fraîche",
+        "fp": "fraîches"
+    },
+    {
+        "ms": "beau",
+        "mp": "beaux",
+        "fs": "belle",
+        "fp": "belles"
+    },
+    {
+        "ms": "nouveau",
+        "mp": "nouveaux",
+        "fs": "nouvelle",
+        "fp": "nouvelles"
+    },
+    {
+        "ms": "vieux",
+        "mp": "vieux",
+        "fs": "vieille",
+        "fp": "vieilles"
+    },
+    {
+        "ms": "blanc",
+        "mp": "blancs",
+        "fs": "blanche",
+        "fp": "blanches"
+    },
+    {
+        "ms": "sec",
+        "mp": "secs",
+        "fs": "sèche",
+        "fp": "sèches"
+    },
+    {
+        "ms": "long",
+        "mp": "longs",
+        "fs": "longue",
+        "fp": "longues"
+    },
+    {
+        "ms": "doux",
+        "mp": "doux",
+        "fs": "douce",
+        "fp": "douces"
+    },
+    {
+        "ms": "fou",
+        "mp": "fous",
+        "fs": "folle",
+        "fp": "folles"
+    },
+    {
+        "ms": "roux",
+        "mp": "roux",
+        "fs": "rousse",
+        "fp": "rousses"
+    },
+    {
+        "ms": "épais",
+        "mp": "épais",
+        "fs": "épaisse",
+        "fp": "épaisses"
+    },
+    {
+        "ms": "jaloux",
+        "mp": "jaloux",
+        "fs": "jalouse",
+        "fp": "jalouses"
+    },
+    {
+        "ms": "gentil",
+        "mp": "gentils",
+        "fs": "gentille",
+        "fp": "gentilles"
+    },
+    {
+        "ms": "public",
+        "mp": "publics",
+        "fs": "publique",
+        "fp": "publiques"
+    },
+    {
+        "ms": "grec",
+        "mp": "grecs",
+        "fs": "grecque",
+        "fp": "grecques"
+    },
+    {
+        "ms": "bon",
+        "mp": "bons",
+        "fs": "bonne",
+        "fp": "bonnes"
+    }
+]

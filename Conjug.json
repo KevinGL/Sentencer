@@ -1,0 +1,1457 @@
+[
+	{
+		"verb": "Être",
+		"tenses" : {
+			"present" : [
+				"suis",
+				"es",
+				"est",
+				"sommes",
+				"êtes",
+				"sont"
+			],
+			
+			"past tense": [
+				"ai été",
+				"as été",
+				"a été",
+				"avons été",
+				"avez été",
+				"ont été"
+			],
+			
+			"imperfect": [
+				"étais",
+				"étais",
+				"était",
+				"étions",
+				"étiez",
+				"étaient"
+			],
+			
+			"future": [
+				"serai",
+				"seras",
+				"sera",
+				"serons",
+				"serez",
+				"seront"
+			],
+			
+			"simple past": [
+				"fus",
+				"fus",
+				"fut",
+				"fûmes",
+				"fûtes",
+				"furent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Avoir",
+		"tenses" : {
+			"present" : [
+				"ai",
+				"as",
+				"a",
+				"avons",
+				"avez",
+				"ont"
+			],
+			
+			"past tense": [
+				"ai eu",
+				"as eu",
+				"a eu",
+				"avons eu",
+				"avez eu",
+				"ont eu"
+			],
+			
+			"imperfect": [
+				"avais",
+				"avais",
+				"avait",
+				"avions",
+				"aviez",
+				"avaient"
+			],
+			
+			"future": [
+				"aurai",
+				"auras",
+				"aura",
+				"aurons",
+				"aurez",
+				"auront"
+			],
+			
+			"simple past": [
+				"eus",
+				"eus",
+				"eut",
+				"eûmes",
+				"eûtes",
+				"eurent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Aller",
+		"tenses" : {
+			"present" : [
+				"vais",
+				"vas",
+				"va",
+				"allons",
+				"allez",
+				"vont"
+			],
+			
+			"past tense": [
+				"suis allé",
+				"es allé",
+				"est allé",
+				"sommes allés",
+				"êtes allés",
+				"sont allés"
+			],
+			
+			"imperfect": [
+				"allais",
+				"allais",
+				"allait",
+				"allions",
+				"alliez",
+				"allaient"
+			],
+			
+			"future": [
+				"irai",
+				"iras",
+				"ira",
+				"irons",
+				"irez",
+				"iront"
+			],
+			
+			"simple past": [
+				"allai",
+				"allas",
+				"alla",
+				"allâmes",
+				"allâtes",
+				"allèrent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Parler",
+		"tenses" : {
+			"present" : [
+				"parle",
+				"parles",
+				"parle",
+				"parlons",
+				"parlez",
+				"parlent"
+			],
+			
+			"past tense": [
+				"ai parlé",
+				"as parlé",
+				"a parlé",
+				"avons parlé",
+				"avez parlé",
+				"ont parlé"
+			],
+			
+			"imperfect": [
+				"parlais",
+				"parlais",
+				"parlait",
+				"parlions",
+				"parliez",
+				"paraient"
+			],
+			
+			"future": [
+				"parlerai",
+				"parleras",
+				"parlera",
+				"parlerons",
+				"parlerez",
+				"parleront"
+			],
+			
+			"simple past": [
+				"parlai",
+				"parlas",
+				"parla",
+				"parlâmes",
+				"parlâtes",
+				"parlèrent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Faire",
+		"tenses" : {
+			"present" : [
+				"fais",
+				"fais",
+				"fait",
+				"faisons",
+				"faîtes",
+				"font"
+			],
+			
+			"past tense": [
+				"ai fait",
+				"as fait",
+				"a fait",
+				"avons fait",
+				"avez fait",
+				"ont fait"
+			],
+			
+			"imperfect": [
+				"faisais",
+				"faisais",
+				"faisait",
+				"faisions",
+				"faisiez",
+				"faisaient"
+			],
+			
+			"future": [
+				"ferai",
+				"feras",
+				"fera",
+				"ferons",
+				"ferez",
+				"feront"
+			],
+			
+			"simple past": [
+				"fis",
+				"fis",
+				"fit",
+				"fîmes",
+				"fites",
+				"firent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Prendre",
+		"tenses" : {
+			"present" : [
+				"prends",
+				"prends",
+				"prend",
+				"prenons",
+				"prenez",
+				"prennent"
+			],
+			
+			"past tense": [
+				"ai pris",
+				"as pris",
+				"a pris",
+				"avons pris",
+				"avez pris",
+				"ont pris"
+			],
+			
+			"imperfect": [
+				"prenais",
+				"prenais",
+				"prenait",
+				"prenions",
+				"preniez",
+				"prenaient"
+			],
+			
+			"future": [
+				"prendrai",
+				"prendras",
+				"prendra",
+				"prendrons",
+				"prendrez",
+				"prendront"
+			],
+			
+			"simple past": [
+				"pris",
+				"pris",
+				"prit",
+				"prîmes",
+				"prîtes",
+				"prirent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Vouloir",
+		"tenses" : {
+			"present" : [
+				"veux",
+				"veux",
+				"veut",
+				"voulons",
+				"voulez",
+				"veulent"
+			],
+			
+			"past tense": [
+				"ai voulu",
+				"as voulu",
+				"a voulu",
+				"avons voulu",
+				"avez voulu",
+				"ont voulu"
+			],
+			
+			"imperfect": [
+				"voulais",
+				"voulais",
+				"voulait",
+				"voulions",
+				"vouliez",
+				"voulaient"
+			],
+			
+			"future": [
+				"voudrai",
+				"voudras",
+				"voudra",
+				"voudrons",
+				"voudrez",
+				"voundront"
+			],
+			
+			"simple past": [
+				"voulus",
+				"voulus",
+				"voulu",
+				"voulûmes"
+				"voulûtes",
+				"voulurent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Savoir",
+		"tenses" : {
+			"present" : [
+				"sais",
+				"sais",
+				"sait",
+				"savons",
+				"savez",
+				"savent"
+			],
+			
+			"past tense": [
+				"ai su",
+				"as su",
+				"a su",
+				"avons su",
+				"avez su",
+				"ont su"
+			],
+			
+			"imperfect": [
+				"savais",
+				"savais",
+				"savait",
+				"savions",
+				"saviez",
+				"savaient"
+			],
+			
+			"future": [
+				"saurai",
+				"sauras",
+				"saura",
+				"saurons",
+				"saurez",
+				"sauront"
+			],
+			
+			"simple past": [
+				"sus",
+				"sus",
+				"sut",
+				"sûmes"
+				"sûtent",
+				"surent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Pouvoir",
+		"tenses" : {
+			"present" : [
+				"peux",
+				"peux",
+				"peut",
+				"pouvons",
+				"pouvez",
+				"peuvent"
+			],
+			
+			"past tense": [
+				"ai pu",
+				"as pu",
+				"a pu",
+				"avons pu",
+				"avez pu",
+				"ont pu"
+			],
+			
+			"imperfect": [
+				"pouvais",
+				"pouvais",
+				"pouvait",
+				"pouvions",
+				"pouviez",
+				"pouvaient"
+			],
+			
+			"future": [
+				"pourrai",
+				"pourras",
+				"pourra",
+				"pourrons",
+				"pourrez",
+				"pourront"
+			],
+			
+			"simple past": [
+				"pus",
+				"pus",
+				"pu",
+				"pûmes"
+				"pûtent",
+				"purent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Venir",
+		"tenses" : {
+			"present" : [
+				"viens",
+				"viens",
+				"vient",
+				"venons",
+				"venez",
+				"viennent"
+			],
+			
+			"past tense": [
+				"suis venu",
+				"es venu",
+				"est venu",
+				"sommes venus",
+				"êtes venus",
+				"sont venus"
+			],
+			
+			"imperfect": [
+				"venais",
+				"venais",
+				"venait",
+				"venions",
+				"veniez",
+				"venaient"
+			],
+			
+			"future": [
+				"viendrai",
+				"viendras",
+				"viendra",
+				"viendrons",
+				"viendrez",
+				"viendront"
+			],
+			
+			"simple past": [
+				"vins",
+				"vins",
+				"vint",
+				"vînmes"
+				"vîntes",
+				"vinrent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Dire",
+		"tenses" : {
+			"present" : [
+				"dis",
+				"dis",
+				"dit",
+				"disons",
+				"dîtes",
+				"disent"
+			],
+			
+			"past tense": [
+				"ai dit",
+				"as dit",
+				"a dit",
+				"avons dit",
+				"avez dit",
+				"ont dit"
+			],
+			
+			"imperfect": [
+				"disais",
+				"disais",
+				"disait",
+				"disions",
+				"disiez",
+				"disaient"
+			],
+			
+			"future": [
+				"dirai",
+				"diras",
+				"dira",
+				"dirons",
+				"direz",
+				"diront"
+			],
+			
+			"simple past": [
+				"dis",
+				"dis",
+				"dit",
+				"dîmes"
+				"dîtes",
+				"dirent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Donner",
+		"tenses" : {
+			"present" : [
+				"donne",
+				"donnes",
+				"donne",
+				"donnons",
+				"donnez",
+				"donnent"
+			],
+			
+			"past tense": [
+				"ai donné",
+				"as donné",
+				"a donné",
+				"avons donné",
+				"avez donné",
+				"ont donné"
+			],
+			
+			"imperfect": [
+				"donnais",
+				"donnais",
+				"donnait",
+				"donnions",
+				"donniez",
+				"donnaient"
+			],
+			
+			"future": [
+				"donnerai",
+				"donneras",
+				"donnera",
+				"donnerons",
+				"donnerez",
+				"donneront"
+			],
+			
+			"simple past": [
+				"donnai",
+				"donnas",
+				"donna",
+				"donnâmes"
+				"donnâtes",
+				"donnèrent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Penser",
+		"tenses" : {
+			"present" : [
+				"pense",
+				"penses",
+				"pense",
+				"pensons",
+				"pensez",
+				"pensent"
+			],
+			
+			"past tense": [
+				"ai pensé",
+				"as pensé",
+				"a pensé",
+				"avons pensé",
+				"avez pensé",
+				"ont pensé"
+			],
+			
+			"imperfect": [
+				"pensais",
+				"pensais",
+				"pensait",
+				"pensions",
+				"pensiez",
+				"pensaient"
+			],
+			
+			"future": [
+				"penserai",
+				"penseras",
+				"pensera",
+				"penserons",
+				"penserez",
+				"penseront"
+			],
+			
+			"simple past": [
+				"pensai",
+				"pensas",
+				"pensa",
+				"pensâmes"
+				"pensâtes",
+				"pensèrent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Aider",
+		"tenses" : {
+			"present" : [
+				"aide",
+				"aides",
+				"aide",
+				"aidons",
+				"aidez",
+				"aidont"
+			],
+			
+			"past tense": [
+				"ai aidé",
+				"as aidé",
+				"a aidé",
+				"avons aidé",
+				"avez aidé",
+				"ont aidé"
+			],
+			
+			"imperfect": [
+				"aidais",
+				"aidais",
+				"aidait",
+				"aidions",
+				"aidiez",
+				"aidaient"
+			],
+			
+			"future": [
+				"aiderai",
+				"aideras",
+				"aidera",
+				"aiderons",
+				"aiderez",
+				"aideront"
+			],
+			
+			"simple past": [
+				"aidai",
+				"aidas",
+				"aida",
+				"aidâmes"
+				"aidâtes",
+				"aidèrent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Aimer",
+		"tenses" : {
+			"present" : [
+				"aime",
+				"aimes",
+				"aime",
+				"aimons",
+				"aimez",
+				"aimont"
+			],
+			
+			"past tense": [
+				"ai aimé",
+				"as aimé",
+				"a aimé",
+				"avons aimé",
+				"avez aimé",
+				"ont aimé"
+			],
+			
+			"imperfect": [
+				"aimais",
+				"aimais",
+				"aimait",
+				"aimions",
+				"aimiez",
+				"aimaient"
+			],
+			
+			"future": [
+				"aimerai",
+				"aimeras",
+				"aimera",
+				"aimerons",
+				"aimerez",
+				"aimeront"
+			],
+			
+			"simple past": [
+				"aimai",
+				"aimas",
+				"aima",
+				"aidâmes"
+				"aimâtes",
+				"aimèrent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Devoir",
+		"tenses" : {
+			"present" : [
+				"dois",
+				"dois",
+				"doit",
+				"devons",
+				"devez",
+				"doivent"
+			],
+			
+			"past tense": [
+				"ai dû",
+				"as dû",
+				"a dû",
+				"avons dû",
+				"avez dû",
+				"ont dû"
+			],
+			
+			"imperfect": [
+				"devais",
+				"devais",
+				"devait",
+				"devions",
+				"deviez",
+				"devaient"
+			],
+			
+			"future": [
+				"devrai",
+				"devras",
+				"devra",
+				"devrons",
+				"devrez",
+				"devront"
+			],
+			
+			"simple past": [
+				"dûs",
+				"dûs",
+				"dût",
+				"dûmes"
+				"dûtes",
+				"dûrent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Habiter",
+		"tenses" : {
+			"present" : [
+				"habite",
+				"habites",
+				"habite",
+				"habitons",
+				"habitez",
+				"habitent"
+			],
+			
+			"past tense": [
+				"ai habité",
+				"as habité",
+				"a habité",
+				"avons habité",
+				"avez habité",
+				"ont habité"
+			],
+			
+			"imperfect": [
+				"habitais",
+				"habitais",
+				"habitait",
+				"habitions",
+				"habitiez",
+				"habitaient"
+			],
+			
+			"future": [
+				"habiterai",
+				"habiteras",
+				"habitera",
+				"habiterons",
+				"habiterez",
+				"habiteront"
+			],
+			
+			"simple past": [
+				"habitai",
+				"habitas",
+				"habita",
+				"habitâmes"
+				"habitâtes",
+				"habitèrent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Regarder",
+		"tenses" : {
+			"present" : [
+				"regarde",
+				"regardes",
+				"regarde",
+				"regardons",
+				"regardez",
+				"regardent"
+			],
+			
+			"past tense": [
+				"ai regardé",
+				"as regardé",
+				"a regardé",
+				"avons regardé",
+				"avez regardé",
+				"ont regardé"
+			],
+			
+			"imperfect": [
+				"regardais",
+				"regardais",
+				"regardait",
+				"regardions",
+				"regardiez",
+				"regardaient"
+			],
+			
+			"future": [
+				"regarderai",
+				"regarderas",
+				"regardera",
+				"regarderons",
+				"regarderez",
+				"regarderont"
+			],
+			
+			"simple past": [
+				"regardai",
+				"regardas",
+				"regarda",
+				"regardâmes"
+				"regardâtes",
+				"regardèrent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Utiliser",
+		"tenses" : {
+			"present" : [
+				"utilise",
+				"utilises",
+				"utilise",
+				"utilisons",
+				"utilisez",
+				"utilisent"
+			],
+			
+			"past tense": [
+				"ai utilisé",
+				"as utilisé",
+				"a utilisé",
+				"avons utilisé",
+				"avez utilisé",
+				"ont utilisé"
+			],
+			
+			"imperfect": [
+				"utilisais",
+				"utilisais",
+				"utilisait",
+				"utilisions",
+				"utilisiez",
+				"utilisaient"
+			],
+			
+			"future": [
+				"utiliserai",
+				"utiliseras",
+				"utilisera",
+				"utiliserons",
+				"utiliserez",
+				"utiliseront"
+			],
+			
+			"simple past": [
+				"utilisai",
+				"utilisas",
+				"utilisa",
+				"utilisâmes"
+				"utilisâtes",
+				"utilisèrent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Essayer",
+		"tenses" : {
+			"present" : [
+				"essaie",
+				"essaies",
+				"essaie",
+				"essayons",
+				"essayez",
+				"essayent"
+			],
+			
+			"past tense": [
+				"ai essayé",
+				"as essayé",
+				"a essayé",
+				"avons essayé",
+				"avez essayé",
+				"ont essayé"
+			],
+			
+			"imperfect": [
+				"essayais",
+				"essayais",
+				"essayait",
+				"essayions",
+				"essayiez",
+				"essayaient"
+			],
+			
+			"future": [
+				"essaierai",
+				"essaieras",
+				"essaiera",
+				"essaierons",
+				"essaierez",
+				"essaieront"
+			],
+			
+			"simple past": [
+				"essayai",
+				"essayas",
+				"essaya",
+				"essayâmes"
+				"essayâtes",
+				"essayèrent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Marcher",
+		"tenses" : {
+			"present": [
+				"marche",
+				"marches",
+				"marche",
+				"marchons",
+				"marchez",
+				"marchent"
+			],
+			"past tense": [
+				"ai marché",
+				"as marché",
+				"a marché",
+				"avons marché",
+				"avez marché",
+				"ont marché"
+			],
+			"imperfect": [
+				"marchais",
+				"marchais",
+				"marchait",
+				"marchions",
+				"marchiez",
+				"marchaient"
+			],
+			"future": [
+				"marcherai",
+				"marcheras",
+				"marchera",
+				"marcherons",
+				"marcherez",
+				"marcheront"
+			],
+			"simple past": [
+				"marchai",
+				"marchas",
+				"marcha",
+				"marchâmes",
+				"marchâtes",
+				"marchèrent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Écrire",
+		"tenses" : {
+			"present": [
+				"écris",
+				"écris",
+				"écrit",
+				"écrivons",
+				"écrivez",
+				"écrivent"
+			],
+			"past tense": [
+				"ai écrit",
+				"as écrit",
+				"a écrit",
+				"avons écrit",
+				"avez écrit",
+				"ont écrit"
+			],
+			"imperfect": [
+				"écrivais",
+				"écrivais",
+				"écrivait",
+				"écrivions",
+				"écriviez",
+				"écrivaient"
+			],
+			"future": [
+				"écrirai",
+				"écriras",
+				"écrira",
+				"écrirons",
+				"écrirez",
+				"écriront"
+			],
+			"simple past": [
+				"écrivis",
+				"écrivis",
+				"écrivit",
+				"écrivîmes",
+				"écrivîtes",
+				"écrivirent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Voir",
+		"tenses" : {
+			"present": [
+				"vois",
+				"vois",
+				"voit",
+				"voyons",
+				"voyez",
+				"voient"
+			],
+			"past tense": [
+				"ai vu",
+				"as vu",
+				"a vu",
+				"avons vu",
+				"avez vu",
+				"ont vu"
+			],
+			"imperfect": [
+				"voyais",
+				"voyais",
+				"voyait",
+				"voyions",
+				"voyiez",
+				"voyaient"
+			],
+			"future": [
+				"verrai",
+				"verras",
+				"verra",
+				"verrons",
+				"verrez",
+				"verront"
+			],
+			"simple past": [
+				"vis",
+				"vis",
+				"vit",
+				"vîmes",
+				"vîtes",
+				"virent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Entendre",
+		"tenses" : {
+			"present": [
+				"entends",
+				"entends",
+				"entend",
+				"entendons",
+				"entendez",
+				"entendent"
+			],
+			"past tense": [
+				"ai entendu",
+				"as entendu",
+				"a entendu",
+				"avons entendu",
+				"avez entendu",
+				"ont entendu"
+			],
+			"imperfect": [
+				"entendais",
+				"entendais",
+				"entendait",
+				"entendions",
+				"entendiez",
+				"entendaient"
+			],
+			"future": [
+				"entendrai",
+				"entendras",
+				"entendra",
+				"entendrons",
+				"entendrez",
+				"entendront"
+			],
+			"simple past": [
+				"entendis",
+				"entendis",
+				"entendit",
+				"entendîmes",
+				"entendîtes",
+				"entendirent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Sentir",
+		"tenses" : {
+			"present": [
+				"sens",
+				"sens",
+				"sent",
+				"sentons",
+				"sentez",
+				"sentent"
+			],
+			"past tense": [
+				"ai senti",
+				"as senti",
+				"a senti",
+				"avons senti",
+				"avez senti",
+				"ont senti"
+			],
+			"imperfect": [
+				"sentais",
+				"sentais",
+				"sentait",
+				"sentions",
+				"sentiez",
+				"sentaient"
+			],
+			"future": [
+				"sentirai",
+				"sentiras",
+				"sentira",
+				"sentirons",
+				"sentirez",
+				"sentiront"
+			],
+			"simple past": [
+				"sentis",
+				"sentis",
+				"sentit",
+				"sentîmes",
+				"sentîtes",
+				"sentirent"
+			]
+		}
+	},
+	
+	{
+		"verb": "Partir",
+		"tenses": {
+			"present": [
+				"pars",
+				"pars",
+				"part",
+				"partons",
+				"partez",
+				"partent"
+			],
+			"past tense": [
+				"suis parti",
+				"es parti",
+				"est parti",
+				"sommes partis",
+				"êtes partis",
+				"sont partis"
+			],
+			"imperfect": [
+				"partais",
+				"partais",
+				"partait",
+				"partions",
+				"partiez",
+				"partaient"
+			],
+			"future": [
+				"partirai",
+				"partiras",
+				"partira",
+				"partirons",
+				"partirez",
+				"partiront"
+			],
+			"simple past": [
+				"partis",
+				"partis",
+				"partit",
+				"partîmes",
+				"partîtes",
+				"partirent"
+			]
+		}
+	},
+	{
+		"verb": "Ouvrir",
+		"tenses": {
+			"present": [
+				"ouvre",
+				"ouvres",
+				"ouvre",
+				"ouvrons",
+				"ouvrez",
+				"ouvrent"
+			],
+			"past tense": [
+				"ai ouvert",
+				"as ouvert",
+				"a ouvert",
+				"avons ouvert",
+				"avez ouvert",
+				"ont ouvert"
+			],
+			"imperfect": [
+				"ouvrais",
+				"ouvrais",
+				"ouvrait",
+				"ouvrions",
+				"ouvriez",
+				"ouvraient"
+			],
+			"future": [
+				"ouvrirai",
+				"ouvriras",
+				"ouvrira",
+				"ouvrirons",
+				"ouvrirez",
+				"ouvriront"
+			],
+			"simple past": [
+				"ouvris",
+				"ouvris",
+				"ouvrit",
+				"ouvrîmes",
+				"ouvrîtes",
+				"ouvrirent"
+			]
+		}
+	},
+	{
+		"verb": "Fermer",
+		"tenses": {
+			"present": [
+				"ferme",
+				"fermes",
+				"ferme",
+				"fermons",
+				"fermez",
+				"ferment"
+			],
+			"past tense": [
+				"ai fermé",
+				"as fermé",
+				"a fermé",
+				"avons fermé",
+				"avez fermé",
+				"ont fermé"
+			],
+			"imperfect": [
+				"fermais",
+				"fermais",
+				"fermait",
+				"fermions",
+				"fermiez",
+				"fermaient"
+			],
+			"future": [
+				"fermerai",
+				"fermeras",
+				"fermera",
+				"fermerons",
+				"fermerez",
+				"fermeront"
+			],
+			"simple past": [
+				"fermai",
+				"fermas",
+				"ferma",
+				"fermâmes",
+				"fermâtes",
+				"fermèrent"
+			]
+		}
+	},
+	{
+		"verb": "Porter",
+		"tenses": {
+			"present": [
+				"porte",
+				"portes",
+				"porte",
+				"portons",
+				"portez",
+				"portent"
+			],
+			"past tense": [
+				"ai porté",
+				"as porté",
+				"a porté",
+				"avons porté",
+				"avez porté",
+				"ont porté"
+			],
+			"imperfect": [
+				"portais",
+				"portais",
+				"portait",
+				"portions",
+				"portiez",
+				"portaient"
+			],
+			"future": [
+				"porterai",
+				"porteras",
+				"portera",
+				"porterons",
+				"porterez",
+				"porteront"
+			],
+			"simple past": [
+				"portai",
+				"portas",
+				"porta",
+				"portâmes",
+				"portâtes",
+				"portèrent"
+			]
+		}
+	},
+	{
+		"verb": "Rendre",
+		"tenses": {
+			"present": [
+				"rends",
+				"rends",
+				"rend",
+				"rendons",
+				"rendez",
+				"rendent"
+			],
+			"past tense": [
+				"ai rendu",
+				"as rendu",
+				"a rendu",
+				"avons rendu",
+				"avez rendu",
+				"ont rendu"
+			],
+			"imperfect": [
+				"rendais",
+				"rendais",
+				"rendait",
+				"rendions",
+				"rendiez",
+				"rendaient"
+			],
+			"future": [
+				"rendrai",
+				"rendras",
+				"rendra",
+				"rendrons",
+				"rendrez",
+				"rendront"
+			],
+			"simple past": [
+				"rendis",
+				"rendis",
+				"rendit",
+				"rendîmes",
+				"rendîtes",
+				"rendirent"
+			]
+		}
+	}
+]
