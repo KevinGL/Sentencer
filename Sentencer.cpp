@@ -226,6 +226,43 @@ Sentencer::Sentencer()
     {
         std::wcout << v << std::endl;
     }*/
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
+    file.open("../Mini-libs/Sentencer/Adverbs_negations.json");
+
+    if(!file.is_open())
+    {
+        std::cout << "\"../Mini-libs/Sentencer/Adverbs_negations.json\" doest not exist" << std::endl;
+        exit(-1);
+    }
+
+    while(1)
+    {
+        std::wstring line;
+
+        if(!getline(file, line))
+        {
+            break;
+        }
+
+        if(line.find(L"\"") != std::string::npos)
+        {
+            std::wstring adverb = line;
+
+            adverb.erase(0, adverb.find(L"\"") + 1);
+            adverb.erase(adverb.rfind(L"\""));
+
+            adverbsNegations.push_back(Sent_tolower(adverb));
+        }
+    }
+
+    file.close();
+
+    /*for(const std::wstring a : adverbsNegations)
+    {
+        std::wcout << a << std::endl;
+    }*/
 }
 
 std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool noPoint)
@@ -334,8 +371,7 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         res += L" ";
     }
 
-    //if(sent.adverb == L"pas" || sent.adverb == L"plus" || sent.adverb == L"jamais" || sent.adverb == L"rien")
-    if(sent.adverb.find(L"pas") != std::string::npos || sent.adverb.find(L"plus") != std::string::npos || sent.adverb.find(L"jamais") != std::string::npos || sent.adverb.find(L"rien") != std::string::npos)
+    if(Sent_indexOfWstring(adverbsNegations, Sent_tolower(sent.adverbVerb)) != -1)
     {
         if(Sent_isVoyel(verbConjugued[0]))
         {
@@ -348,7 +384,7 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         }
     }
 
-    if(sent.adverb != L"" && sent.tense == L"past tense")
+    if(sent.adverbVerb != L"" && sent.tense == L"past tense")
     {
         std::wstring auxiliary = verbConjugued;
         std::wstring past = verbConjugued;
@@ -356,14 +392,14 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         auxiliary.erase(auxiliary.find(L" "));
         past.erase(0, past.find(L" ") + 1);
 
-        verbConjugued = auxiliary + L" " + sent.adverb + L" " + past;
+        verbConjugued = auxiliary + L" " + sent.adverbVerb + L" " + past;
     }
 
     res += verbConjugued;
 
-    if(sent.adverb != L"" && sent.tense != L"past tense")
+    if(sent.adverbVerb != L"" && sent.tense != L"past tense")
     {
-        res += L" " + Sent_tolower(sent.adverb);
+        res += L" " + Sent_tolower(sent.adverbVerb);
     }
 
     if(sent.complement != L"")
@@ -381,6 +417,11 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         if(Sent_indexOfWstring(verbsExceptions, Sent_tolower(verb)) == -1)
         {
             setAdjective(gender_number, sent.adjective);
+        }
+
+        if(sent.adverbAdjective != L"")
+        {
+            res += L" " + Sent_tolower(sent.adverbAdjective);
         }
 
         res += L" " + sent.adjective;

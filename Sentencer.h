@@ -12,7 +12,8 @@ struct Sent_sentence
     std::wstring tense = L"present";
     std::wstring complement = L"";
     std::wstring adjective = L"";
-    std::wstring adverb = L"";
+    std::wstring adverbVerb = L"";
+    std::wstring adverbAdjective = L"";
 };
 
 class Sentencer
@@ -23,6 +24,7 @@ class Sentencer
     std::map<std::wstring, std::wstring> gendersExceptions;
     std::map<std::wstring, std::map<std::wstring, std::wstring> > adjectivesExceptions;
     std::vector<std::wstring> verbsExceptions;
+    std::vector<std::wstring> adverbsNegations;
 
     void addDeterminant(std::wstring &term);
     bool isPlural(const std::wstring term);
