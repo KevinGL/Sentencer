@@ -332,6 +332,12 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         res += L" ";
     }
 
+    std::wofstream file("aa.txt", std::ios::app);
+
+    file << verbConjugued << std::endl;
+
+    file.close();
+
     //if(sent.adverb == L"pas" || sent.adverb == L"plus" || sent.adverb == L"jamais" || sent.adverb == L"rien")
     if(sent.adverb.find(L"pas") != std::string::npos || sent.adverb.find(L"plus") != std::string::npos || sent.adverb.find(L"jamais") != std::string::npos || sent.adverb.find(L"rien") != std::string::npos)
     {

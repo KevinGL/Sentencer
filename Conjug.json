@@ -1453,5 +1453,50 @@
 				"rendirent"
 			]
 		}
+	},
+	{
+		"verb": "Tomber",
+		"tenses": {
+			"present": [
+				"tombe",
+				"tombes",
+				"tombe",
+				"tombons",
+				"tombez",
+				"tombent"
+			],
+			"past tense": [
+				"suis tombé",
+				"es tombé",
+				"est tombé",
+				"sommes tombés",
+				"êtes tombés",
+				"sont tombés"
+			],
+			"imperfect": [
+				"tombais",
+				"tombais",
+				"tombait",
+				"tombions",
+				"tombiez",
+				"tombaient"
+			],
+			"future": [
+				"tomberai",
+				"tomberas",
+				"tombera",
+				"tomberons",
+				"tomberez",
+				"tomberont"
+			],
+			"simple past": [
+				"tombai",
+				"tombas",
+				"tomba",
+				"tombâmes",
+				"tombâtes",
+				"tombèrent"
+			]
+		}
 	}
 ]

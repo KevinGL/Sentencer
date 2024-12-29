@@ -72,7 +72,9 @@ std::wstring Sent_tolower(const std::wstring str)
 
 bool Sent_isVoyel(const wchar_t character)
 {
-    if(std::tolower(character) == 'a' || std::tolower(character) == 'e' || std::tolower(character) == 'i' || std::tolower(character) == 'o' || std::tolower(character) == 'u' || std::tolower(character) == 'y')
+    if(std::tolower(character) == L'a' || std::tolower(character) == L'e' || std::tolower(character) == L'i' || std::tolower(character) == L'o' || std::tolower(character) == L'u' || std::tolower(character) == L'y' ||
+       std::tolower(character) == L'à' || std::tolower(character) == L'é' || std::tolower(character) == L'î' || std::tolower(character) == L'ô' || std::tolower(character) == L'ù' ||
+       std::tolower(character) == L'â' || std::tolower(character) == L'è' || std::tolower(character) == L'ï' || std::tolower(character) == L'ö' || std::tolower(character) == L'û')
     {
         return true;
     }
