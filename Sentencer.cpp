@@ -377,7 +377,6 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         res += L" ";        //Space si no apostroph
     }
 
-<<<<<<< HEAD
     //////////////////////////////////////////////////////////////////////////
 
     std::wstring pronoun = L"";
@@ -386,13 +385,6 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
     if(sent.DOC != L"" && sent.DOCPronoun)
     {
         const std::wstring gender_number = getGenderNumber(sent.DOC);
-=======
-    std::wstring pronoun = L"";
-
-    if(sent.complement != L"" && sent.complementPronoun)
-    {
-        const std::wstring gender_number = getGenderNumber(sent.complement);
->>>>>>> 7a8e83efbe0df54007d8f43a26c25ffa59ccc9fb
 
         if(gender_number == L"ms")
         {
@@ -428,21 +420,14 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         }
     }
 
-<<<<<<< HEAD
     //////////////////////////////////////////////////////////////////////////
 
     //Negation "ne"
-=======
->>>>>>> 7a8e83efbe0df54007d8f43a26c25ffa59ccc9fb
     if(Sent_indexOfWstring(adverbsNegations, Sent_tolower(sent.adverbVerb)) != -1)
     {
         std::wstring next;
 
-<<<<<<< HEAD
         if(!sent.DOCPronoun)
-=======
-        if(!sent.complementPronoun)
->>>>>>> 7a8e83efbe0df54007d8f43a26c25ffa59ccc9fb
         {
             next = verbConjugued;
         }
@@ -465,12 +450,9 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
 
     res += pronoun;
 
-<<<<<<< HEAD
     //////////////////////////////////////////////////////////////////////////
 
     //Adverb in composed tense
-=======
->>>>>>> 7a8e83efbe0df54007d8f43a26c25ffa59ccc9fb
     if(sent.adverbVerb != L"" && sent.tense == L"past tense")
     {
         std::wstring auxiliary = verbConjugued;
@@ -482,18 +464,12 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         verbConjugued = auxiliary + L" " + sent.adverbVerb + L" " + past;
     }
 
-<<<<<<< HEAD
     //////////////////////////////////////////////////////////////////////////
 
     //Past participle with auxiliary "avoir"
     if(sent.DOCPronoun && sent.tense == L"past tense" && Sent_getAuxiliary(verbConjugued) == L"Avoir")
     {
         const std::wstring gender_number = getGenderNumber(sent.DOC);
-=======
-    if(sent.complementPronoun && sent.tense == L"past tense" && Sent_getAuxiliary(verbConjugued) == L"Avoir")
-    {
-        const std::wstring gender_number = getGenderNumber(sent.complement);
->>>>>>> 7a8e83efbe0df54007d8f43a26c25ffa59ccc9fb
 
         if(gender_number == L"mp")
         {
@@ -513,11 +489,8 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         }
     }
 
-<<<<<<< HEAD
     //////////////////////////////////////////////////////////////////////////
 
-=======
->>>>>>> 7a8e83efbe0df54007d8f43a26c25ffa59ccc9fb
     res += verbConjugued;
 
     //////////////////////////////////////////////////////////////////////////
@@ -527,13 +500,9 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         res += L" " + Sent_tolower(sent.adverbVerb);        //Add adverb
     }
 
-<<<<<<< HEAD
     //////////////////////////////////////////////////////////////////////////
 
     if(sent.DOC != L"" && !sent.DOCPronoun)
-=======
-    if(sent.complement != L"" && !sent.complementPronoun)
->>>>>>> 7a8e83efbe0df54007d8f43a26c25ffa59ccc9fb
     {
         addDeterminant(sent.DOC);
         res += L" " + sent.DOC;          //Add DOC
