@@ -251,3 +251,23 @@ int Sent_indexOfWstring(const std::vector<std::wstring> array, const std::wstrin
 
     return -1;
 }
+
+std::wstring Sent_getAuxiliary(const std::wstring verb)
+{
+    if(verb.find(L" ") == std::string::npos)
+    {
+        return L"";
+    }
+
+    std::wstring auxiliary = verb;
+
+    auxiliary.erase(auxiliary.find(L" "));
+
+    if(auxiliary == L"ai" || auxiliary == L"as" || auxiliary == L"a" || auxiliary == L"avons" || auxiliary == L"avez" || auxiliary == L"ont" ||
+       auxiliary == L"avais" || auxiliary == L"avais" || auxiliary == L"avait" || auxiliary == L"avions" || auxiliary == L"aviez" || auxiliary == L"avaient")
+    {
+        return L"Avoir";
+    }
+
+    return L"Être";
+}

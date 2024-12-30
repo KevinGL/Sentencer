@@ -371,9 +371,61 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         res += L" ";
     }
 
+    std::wstring pronoun = L"";
+
+    if(sent.complement != L"" && sent.complementPronoun)
+    {
+        const std::wstring gender_number = getGenderNumber(sent.complement);
+
+        if(gender_number == L"ms")
+        {
+            if(!Sent_isVoyel(verbConjugued[0]))
+            {
+                pronoun = L"le ";
+            }
+
+            else
+            {
+                pronoun = L"l'";
+            }
+        }
+
+        else
+        if(gender_number == L"fs")
+        {
+            if(!Sent_isVoyel(verbConjugued[0]))
+            {
+                pronoun = L"la ";
+            }
+
+            else
+            {
+                pronoun = L"l'";
+            }
+        }
+
+        else
+        if(gender_number == L"mp" || gender_number == L"fp")
+        {
+            pronoun = L"les ";
+        }
+    }
+
     if(Sent_indexOfWstring(adverbsNegations, Sent_tolower(sent.adverbVerb)) != -1)
     {
-        if(Sent_isVoyel(verbConjugued[0]))
+        std::wstring next;
+
+        if(!sent.complementPronoun)
+        {
+            next = verbConjugued;
+        }
+
+        else
+        {
+            next = pronoun;
+        }
+
+        if(Sent_isVoyel(next[0]))
         {
             res += L"n'";
         }
@@ -383,6 +435,8 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
             res += L"ne ";
         }
     }
+
+    res += pronoun;
 
     if(sent.adverbVerb != L"" && sent.tense == L"past tense")
     {
@@ -395,6 +449,28 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         verbConjugued = auxiliary + L" " + sent.adverbVerb + L" " + past;
     }
 
+    if(sent.complementPronoun && sent.tense == L"past tense" && Sent_getAuxiliary(verbConjugued) == L"Avoir")
+    {
+        const std::wstring gender_number = getGenderNumber(sent.complement);
+
+        if(gender_number == L"mp")
+        {
+            verbConjugued += L"s";
+        }
+
+        else
+        if(gender_number == L"fs")
+        {
+            verbConjugued += L"e";
+        }
+
+        else
+        if(gender_number == L"fp")
+        {
+            verbConjugued += L"es";
+        }
+    }
+
     res += verbConjugued;
 
     if(sent.adverbVerb != L"" && sent.tense != L"past tense")
@@ -402,7 +478,7 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         res += L" " + Sent_tolower(sent.adverbVerb);
     }
 
-    if(sent.complement != L"")
+    if(sent.complement != L"" && !sent.complementPronoun)
     {
         addDeterminant(sent.complement);
         res += L" " + sent.complement;
@@ -469,6 +545,12 @@ std::wstring Sentencer::assemble(const std::vector<Sent_sentence> sentences, std
         if(i == 0)
         {
             res += create(sentences[i], false, true);
+        }
+
+        else
+        if(i > 0 && i < sentences.size() - 1)
+        {
+            res += create(sentences[i], true, true);
         }
 
         else

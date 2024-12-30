@@ -14,6 +14,7 @@ struct Sent_sentence
     std::wstring adjective = L"";
     std::wstring adverbVerb = L"";
     std::wstring adverbAdjective = L"";
+    bool complementPronoun = false;
 };
 
 class Sentencer
@@ -45,3 +46,4 @@ std::wstring Sent_toupperInit(const std::wstring str);
 bool Sent_isVoyel(const wchar_t character);
 bool Sent_isPronom(const std::wstring term);
 int Sent_indexOfWstring(const std::vector<std::wstring> array, const std::wstring value);
+std::wstring Sent_getAuxiliary(const std::wstring verb);
