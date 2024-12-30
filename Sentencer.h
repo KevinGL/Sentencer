@@ -3,17 +3,19 @@
 #include <vector>
 #include <map>
 #include <fstream>
-#include <conio.h>
 
 struct Sent_sentence
 {
     std::wstring subject;
     std::wstring verb;
     std::wstring tense = L"present";
-    std::wstring complement = L"";
+    std::wstring DOC = L"";
+    std::wstring IOC = L"";
     std::wstring adjective = L"";
     std::wstring adverbVerb = L"";
     std::wstring adverbAdjective = L"";
+    bool DOCPronoun = false;
+    bool IOCPronoun = false;
 };
 
 class Sentencer
@@ -38,6 +40,7 @@ class Sentencer
     std::wstring assemble(const std::vector<Sent_sentence> sentences, std::vector<std::wstring> connectors);
 };
 
+std::string Sent_getRelativePath();
 std::wstring Sent_readValueJSONline(const std::wstring line);
 std::wstring Sent_readKeyJSONline(const std::wstring line);
 std::wstring Sent_tolower(const std::wstring str);
@@ -45,3 +48,4 @@ std::wstring Sent_toupperInit(const std::wstring str);
 bool Sent_isVoyel(const wchar_t character);
 bool Sent_isPronom(const std::wstring term);
 int Sent_indexOfWstring(const std::vector<std::wstring> array, const std::wstring value);
+std::wstring Sent_getAuxiliary(const std::wstring verb);

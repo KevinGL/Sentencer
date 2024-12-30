@@ -1,5 +1,46 @@
 ﻿#include "Sentencer.h"
 
+std::string Sent_getRelativePath()
+{
+    std::ifstream file("./relative_path.ini");
+
+    if(!file.is_open())
+    {
+        return "./";
+    }
+
+    bool dataPath = false;
+    std::string res = "";
+
+    while(1)
+    {
+        std::string line;
+
+        if(!getline(file, line))
+        {
+            break;
+        }
+
+        if(line.find("[Paths]") != std::string::npos)
+        {
+            dataPath = true;
+        }
+
+        else
+        if(dataPath)
+        {
+            res = line;
+            res.erase(0, res.find("=") + 1);
+
+            break;
+        }
+    }
+
+    file.close();
+
+    return res;
+}
+
 std::wstring Sent_readValueJSONline(const std::wstring line)
 {
     bool inValue = false;
@@ -250,4 +291,24 @@ int Sent_indexOfWstring(const std::vector<std::wstring> array, const std::wstrin
     }
 
     return -1;
+}
+
+std::wstring Sent_getAuxiliary(const std::wstring verb)
+{
+    if(verb.find(L" ") == std::string::npos)
+    {
+        return L"";
+    }
+
+    std::wstring auxiliary = verb;
+
+    auxiliary.erase(auxiliary.find(L" "));
+
+    if(auxiliary == L"ai" || auxiliary == L"as" || auxiliary == L"a" || auxiliary == L"avons" || auxiliary == L"avez" || auxiliary == L"ont" ||
+       auxiliary == L"avais" || auxiliary == L"avais" || auxiliary == L"avait" || auxiliary == L"avions" || auxiliary == L"aviez" || auxiliary == L"avaient")
+    {
+        return L"Avoir";
+    }
+
+    return L"Être";
 }

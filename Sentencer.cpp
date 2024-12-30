@@ -2,11 +2,13 @@
 
 Sentencer::Sentencer()
 {
-    std::wifstream file("../Mini-libs/Sentencer/Conjug.json");
+    const std::string path = Sent_getRelativePath();
+
+    std::wifstream file(path + "Sentencer/Conjug.json");
 
     if(!file.is_open())
     {
-        std::cout << "\"../Mini-libs/Sentencer/Conjug.json\" doest not exist" << std::endl;
+        std::cout << "\"" << path << "Sentencer/Conjug.json\" doest not exist" << std::endl;
         exit(-1);
     }
 
@@ -79,11 +81,11 @@ Sentencer::Sentencer()
 
     ///////////////////////////////////////////////////////////////////////////////////////////
 
-    file.open("../Mini-libs/Sentencer/Exceptions_names_gender.json");
+    file.open(path + "Sentencer/Exceptions_names_gender.json");
 
     if(!file.is_open())
     {
-        std::cout << "\"../Mini-libs/Sentencer/Exceptions_names_gender.json\" doest not exist" << std::endl;
+        std::cout << "\"" << path << "Sentencer/Exceptions_names_gender.json\" doest not exist" << std::endl;
         exit(-1);
     }
 
@@ -127,11 +129,11 @@ Sentencer::Sentencer()
 
     ///////////////////////////////////////////////////////////////////////////////////////////
 
-    file.open("../Mini-libs/Sentencer/Exceptions_adjectives.json");
+    file.open(path + "Sentencer/Exceptions_adjectives.json");
 
     if(!file.is_open())
     {
-        std::cout << "\"../Mini-libs/Sentencer/Exceptions_adjectives.json\" doest not exist" << std::endl;
+        std::cout << "\"" << path << "Sentencer/Exceptions_adjectives.json\" doest not exist" << std::endl;
         exit(-1);
     }
 
@@ -192,11 +194,11 @@ Sentencer::Sentencer()
 
     ///////////////////////////////////////////////////////////////////////////////////////////
 
-    file.open("../Mini-libs/Sentencer/Exceptions_verbs.json");
+    file.open(path + "Sentencer/Exceptions_verbs.json");
 
     if(!file.is_open())
     {
-        std::cout << "\"../Mini-libs/Sentencer/Exceptions_verbs.json\" doest not exist" << std::endl;
+        std::cout << "\"" << path << "Sentencer/Exceptions_verbs.json\" doest not exist" << std::endl;
         exit(-1);
     }
 
@@ -229,11 +231,11 @@ Sentencer::Sentencer()
 
     ///////////////////////////////////////////////////////////////////////////////////////////
 
-    file.open("../Mini-libs/Sentencer/Adverbs_negations.json");
+    file.open(path + "Sentencer/Adverbs_negations.json");
 
     if(!file.is_open())
     {
-        std::cout << "\"../Mini-libs/Sentencer/Adverbs_negations.json\" doest not exist" << std::endl;
+        std::cout << "\"" << path << "Sentencer/Adverbs_negations.json\" doest not exist" << std::endl;
         exit(-1);
     }
 
@@ -281,10 +283,13 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
 
     const std::wstring baseSubject = sent.subject;
 
-    addDeterminant(sent.subject);
+    //////////////////////////////////////////////////////////////////////////
+
+    addDeterminant(sent.subject);       //Determinant
 
     size_t person;
 
+    //Detect person
     if(Sent_tolower(sent.subject) == L"moi")
     {
         person = 0;
@@ -354,10 +359,11 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         person = 2;
     }
 
-    std::wstring verbConjugued = verbs[verb][sent.tense][person];
+    //////////////////////////////////////////////////////////////////////////
+
+    std::wstring verbConjugued = verbs[verb][sent.tense][person];           //Conjug verb
     bool apostroph = false;
 
-    //if(Sent_isVoyel(sent.subject.back()) && Sent_isVoyel(verbConjugued[0]))
     if(sent.subject == L"je" && Sent_isVoyel(verbConjugued[0]))
     {
         sent.subject.back() = L'\'';
@@ -368,12 +374,70 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
 
     if(!apostroph)
     {
-        res += L" ";
+        res += L" ";        //Space si no apostroph
     }
 
+    //////////////////////////////////////////////////////////////////////////
+
+    std::wstring pronoun = L"";
+
+    //Detect DOC pronoun
+    if(sent.DOC != L"" && sent.DOCPronoun)
+    {
+        const std::wstring gender_number = getGenderNumber(sent.DOC);
+
+        if(gender_number == L"ms")
+        {
+            if(!Sent_isVoyel(verbConjugued[0]))
+            {
+                pronoun = L"le ";
+            }
+
+            else
+            {
+                pronoun = L"l'";
+            }
+        }
+
+        else
+        if(gender_number == L"fs")
+        {
+            if(!Sent_isVoyel(verbConjugued[0]))
+            {
+                pronoun = L"la ";
+            }
+
+            else
+            {
+                pronoun = L"l'";
+            }
+        }
+
+        else
+        if(gender_number == L"mp" || gender_number == L"fp")
+        {
+            pronoun = L"les ";
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////
+
+    //Negation "ne"
     if(Sent_indexOfWstring(adverbsNegations, Sent_tolower(sent.adverbVerb)) != -1)
     {
-        if(Sent_isVoyel(verbConjugued[0]))
+        std::wstring next;
+
+        if(!sent.DOCPronoun)
+        {
+            next = verbConjugued;
+        }
+
+        else
+        {
+            next = pronoun;
+        }
+
+        if(Sent_isVoyel(next[0]))
         {
             res += L"n'";
         }
@@ -384,6 +448,11 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         }
     }
 
+    res += pronoun;
+
+    //////////////////////////////////////////////////////////////////////////
+
+    //Adverb in composed tense
     if(sent.adverbVerb != L"" && sent.tense == L"past tense")
     {
         std::wstring auxiliary = verbConjugued;
@@ -395,20 +464,54 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         verbConjugued = auxiliary + L" " + sent.adverbVerb + L" " + past;
     }
 
+    //////////////////////////////////////////////////////////////////////////
+
+    //Past participle with auxiliary "avoir"
+    if(sent.DOCPronoun && sent.tense == L"past tense" && Sent_getAuxiliary(verbConjugued) == L"Avoir")
+    {
+        const std::wstring gender_number = getGenderNumber(sent.DOC);
+
+        if(gender_number == L"mp")
+        {
+            verbConjugued += L"s";
+        }
+
+        else
+        if(gender_number == L"fs")
+        {
+            verbConjugued += L"e";
+        }
+
+        else
+        if(gender_number == L"fp")
+        {
+            verbConjugued += L"es";
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////
+
     res += verbConjugued;
+
+    //////////////////////////////////////////////////////////////////////////
 
     if(sent.adverbVerb != L"" && sent.tense != L"past tense")
     {
-        res += L" " + Sent_tolower(sent.adverbVerb);
+        res += L" " + Sent_tolower(sent.adverbVerb);        //Add adverb
     }
 
-    if(sent.complement != L"")
+    //////////////////////////////////////////////////////////////////////////
+
+    if(sent.DOC != L"" && !sent.DOCPronoun)
     {
-        addDeterminant(sent.complement);
-        res += L" " + sent.complement;
+        addDeterminant(sent.DOC);
+        res += L" " + sent.DOC;          //Add DOC
     }
 
-    if(sent.adjective != L"" && sent.complement == L"")
+    //////////////////////////////////////////////////////////////////////////
+
+    //Add adjective
+    if(sent.adjective != L"" && sent.DOC == L"")
     {
         const std::wstring gender_number = getGenderNumber(baseSubject);
 
@@ -427,6 +530,9 @@ std::wstring Sentencer::create(Sent_sentence sent, const bool noUp, const bool n
         res += L" " + sent.adjective;
     }
 
+    //////////////////////////////////////////////////////////////////////////
+
+    //Capital and point
     if(!noPoint)
     {
         res += L".";
@@ -469,6 +575,12 @@ std::wstring Sentencer::assemble(const std::vector<Sent_sentence> sentences, std
         if(i == 0)
         {
             res += create(sentences[i], false, true);
+        }
+
+        else
+        if(i > 0 && i < sentences.size() - 1)
+        {
+            res += create(sentences[i], true, true);
         }
 
         else

@@ -1498,5 +1498,50 @@
 				"tombèrent"
 			]
 		}
+	},
+	{
+		"verb": "Allumer",
+		"tenses": {
+			"present": [
+				"allume",
+				"allumes",
+				"allume",
+				"allumons",
+				"allumez",
+				"allument"
+			],
+			"past tense": [
+				"ai allumé",
+				"as allumé",
+				"a allumé",
+				"avons allumé",
+				"avez allumé",
+				"ont allumé"
+			],
+			"imperfect": [
+				"allumais",
+				"allumais",
+				"allumait",
+				"allumions",
+				"allumiez",
+				"allumaient"
+			],
+			"future": [
+				"allumerai",
+				"allumeras",
+				"allumera",
+				"allumerons",
+				"allumerez",
+				"allumeront"
+			],
+			"simple past": [
+				"allumai",
+				"allumas",
+				"alluma",
+				"allumâmes",
+				"allumâtes",
+				"allumèrent"
+			]
+		}
 	}
 ]
