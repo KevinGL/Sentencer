@@ -14,8 +14,12 @@ struct Sent_sentence
     std::wstring adjective = L"";
     std::wstring adverbVerb = L"";
     std::wstring adverbAdjective = L"";
+<<<<<<< HEAD
     bool DOCPronoun = false;
     bool IOCPronoun = false;
+=======
+    bool complementPronoun = false;
+>>>>>>> 7a8e83efbe0df54007d8f43a26c25ffa59ccc9fb
 };
 
 class Sentencer
